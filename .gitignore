@@ -1,3 +1,4 @@
-.DS_Store
 /data
 /out
+/__pycache__
+.DS_Store

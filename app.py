@@ -9,5 +9,5 @@ Tk().withdraw()
 print('Waiting for file selection...')
 filename = askopenfilename()
 output = os.path.join(os.path.split(filename)[0], 'converted_report.csv')
-
+print('Processing file...')
 create_report(filename, output)

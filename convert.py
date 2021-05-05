@@ -36,7 +36,7 @@ def create_report(filename, output):
 		else:
 			df_modified = df_modified.append(new_row, ignore_index=True)
 			sis_number = row['SIS Number']
-			new_row = {'SIS Number':sis_number, 'Student Name':df.loc[:, 'Student Name'][0], 'TermCode':df.loc[:, 'TermCode'][0]}
+			new_row = {'SIS Number':sis_number, 'Student Name':row['Student Name'], 'TermCode':row['TermCode']}
 			period = row['Period']
 			new_row[f'Period {period}'] = period
 			new_row[f'Teacher {period}'] = row['Teacher']
