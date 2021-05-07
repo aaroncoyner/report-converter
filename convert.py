@@ -5,7 +5,9 @@ import pandas as pd
 
 
 def create_report(filename, output):
-	df = pd.read_excel(filename)
+	df = (pd.read_excel(filename)
+		  .sort_values(by=['SIS Number', 'Period'])
+		  )
 
 	columns = ['SIS Number', 'Student Name', 'TermCode',
 			   'Period 1', 'Teacher 1', 'Course 1', 'Course Title 1', 'Grading Period Mark 1', 'Abs1 1', 'Abs2 1',
